@@ -3,31 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
     <title>หน้าแรกห้องสมุด</title>
 </head>
-<body>
-    <header>
-        <h1>ห้องสมุดวิทยาลัย</h1>
-        <nav>
-            <ul>
-                <li><a hred="#">หน้าแรก</a></li>
-                <li><a hred="#">หนังสือ</a></li>
-                <li><a hred="#">ติดต่อ</a></li>
-            </ul>
-        </nav>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-blue-100 via-blue-50 to-green-100">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-green-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">📚 ห้องสมุดวิทยาลัย</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-blue-200 transition duration-300 font-medium">หน้าแรก</a></li>
+                    <li><a href="#" class="hover:text-blue-200 transition duration-300 font-medium">หนังสือ</a></li>
+                    <li><a href="login.html" class="hover:text-blue-200 transition duration-300 font-medium">เข้าระบบ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-<main>
-    <section>
-        <h2>ยินดีต้อนรับ</h2>
-        <p>เว็บไซต์ห้องสมุดเพื่อการเรียนรู้</p>
-    </section>
-</main>
-<footer>
-     <p>© 2025 ห้องสมุดวิทยาลัย</p>
-</footer>
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- Welcome Section -->
+        <section class="text-center mb-12">
+            <div class="bg-white border-4 border-blue-500 rounded-xl shadow-lg p-6 inline-block mb-6">
+                <h2 class="text-4xl font-bold text-gray-800">ยินดีต้อนรับสู่ห้องสมุดวิทยาลัย</h2>
+            </div>
+            <p class="text-xl text-gray-700 mb-8">เว็บไซต์ห้องสมุดเพื่อการเรียนรู้และพัฒนาความรู้</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-8">
+                <div class="relative">
+                    <input type="text" placeholder="ค้นหาหนังสือ..." 
+                           class="w-full px-6 py-4 rounded-full border-2 border-blue-400 focus:border-green-500 focus:outline-none shadow-sm">
+                    <button class="absolute right-2 top-2 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-6 py-2 rounded-full transition duration-300">
+                        ค้นหา
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Books Grid Section -->
+        <section>
+            <div class="bg-white border-4 border-green-500 rounded-xl shadow-lg p-4 inline-block mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">หนังสือแนะนำ</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Book Card 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 overflow-hidden border-2 border-blue-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-white text-6xl">📖</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-blue-100 border-2 border-blue-400 rounded-lg p-2 mb-3 inline-block">
+                            <h3 class="text-xl font-bold text-gray-800">หนังสือเทคโนโลยี</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">รวมความรู้ด้านเทคโนโลยีสารสนเทศและการพัฒนาซอฟต์แวร์สมัยใหม่</p>
+                        <button class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg w-full transition duration-300 font-medium">
+                            อ่านเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 overflow-hidden border-2 border-green-300">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <span class="text-white text-6xl">📚</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-green-100 border-2 border-green-400 rounded-lg p-2 mb-3 inline-block">
+                            <h3 class="text-xl font-bold text-gray-800">วรรณกรรมไทย</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">คลังความรู้วรรณกรรมไทยคลาสสิกและร่วมสมัยที่คัดสรรมาอย่างดี</p>
+                        <button class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg w-full transition duration-300 font-medium">
+                            อ่านเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Book Card 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 overflow-hidden border-2 border-blue-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center">
+                        <span class="text-white text-6xl">🔬</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-blue-100 border-2 border-blue-400 rounded-lg p-2 mb-3 inline-block">
+                            <h3 class="text-xl font-bold text-gray-800">วิทยาศาสตร์</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">ค้นพบความรู้ทางวิทยาศาสตร์และการวิจัยที่น่าสนใจ</p>
+                        <button class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg w-full transition duration-300 font-medium">
+                            อ่านเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Subjects Section -->
+        <section class="mt-12">
+            <div class="bg-white border-4 border-blue-500 rounded-xl shadow-lg p-4 inline-block mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">รายวิชาอื่นๆ</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Subject Card 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 overflow-hidden border-2 border-blue-300">
+                    <div class="h-32 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+                        <span class="text-white text-5xl">🎨</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="bg-pink-100 border-2 border-pink-400 rounded-lg p-2 mb-3 inline-block">
+                            <h3 class="text-lg font-bold text-gray-800">ศิลปะ</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">ความรู้ด้านทัศนศิลป์ ดนตรี และการแสดง</p>
+                        <button class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-lg w-full transition duration-300 font-medium text-sm">
+                            ดูรายละเอียด
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 overflow-hidden border-2 border-green-300">
+                    <div class="h-32 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                        <span class="text-white text-5xl">📐</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-2 mb-3 inline-block">
+                            <h3 class="text-lg font-bold text-gray-800">คณิตศาสตร์</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">พีชคณิต เรขาคณิต และคณิตประยุกต์</p>
+                        <button class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-lg w-full transition duration-300 font-medium text-sm">
+                            ดูรายละเอียด
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 overflow-hidden border-2 border-blue-300">
+                    <div class="h-32 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                        <span class="text-white text-5xl">🌍</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="bg-red-100 border-2 border-red-400 rounded-lg p-2 mb-3 inline-block">
+                            <h3 class="text-lg font-bold text-gray-800">สังคมศึกษา</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">ประวัติศาสตร์ ภูมิศาสตร์ และสังคม</p>
+                        <button class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-lg w-full transition duration-300 font-medium text-sm">
+                            ดูรายละเอียด
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 4 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 overflow-hidden border-2 border-green-300">
+                    <div class="h-32 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                        <span class="text-white text-5xl">🗣️</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="bg-indigo-100 border-2 border-indigo-400 rounded-lg p-2 mb-3 inline-block">
+                            <h3 class="text-lg font-bold text-gray-800">ภาษาต่างประเทศ</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">ภาษาอังกฤษ จีน ญี่ปุ่น และอื่นๆ</p>
+                        <button class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-lg w-full transition duration-300 font-medium text-sm">
+                            ดูรายละเอียด
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-700 to-green-700 text-white mt-12">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <p class="text-gray-100">© 2025 ห้องสมุดวิทยาลัย | สงวนลิขสิทธิ์</p>
+            <div class="mt-2 text-sm text-gray-200">
+                <span>จันทร์-ศุกร์ 08:00-16:30 น.</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
-<link rel="stylesheet" href="style.css">
-
